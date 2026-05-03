@@ -3,506 +3,376 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sai Kumar Satapathy — SAP Datasphere & BW/4HANA Engineer at Accenture. Building scalable data pipelines, delta-based replication, and cloud-integrated analytics.">
-<meta name="keywords" content="SAP Datasphere, SAP BW, BW4HANA, SAP Business Data Cloud, Data Engineer, Accenture, AT&T, AWS, Azure">
+<meta name="description" content="Sai Kumar Satapathy — SAP BW & Datasphere Developer at Accenture. 2+ years building high-performance enterprise data platforms, delta-based replication, and cloud-native analytics.">
+<meta name="keywords" content="SAP Datasphere, SAP BW, BW4HANA, SAP Business Data Cloud, Data Engineer, Accenture, AWS, Azure, ABAP">
 <meta name="author" content="Sai Kumar Satapathy">
-<meta property="og:title" content="Sai Kumar Satapathy — SAP Datasphere & BW Engineer">
+<meta property="og:title" content="Sai Kumar Satapathy — SAP BW & Datasphere Developer">
 <meta property="og:description" content="2+ years of enterprise data engineering. 55% faster pipelines. 46% BEx query improvement. SAP Business Data Cloud certified.">
 <meta property="og:type" content="website">
-<title>Sai Kumar Satapathy — SAP Datasphere & BW Engineer</title>
+<title>Sai Kumar Satapathy — SAP BW & Datasphere Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #0a0a0f;
-    --bg2: #11111a;
-    --bg3: #191924;
-    --accent: #5be4a0;
-    --accent2: #3ec4ff;
-    --accent3: #f0c060;
-    --text: #f0ede8;
-    --muted: #888890;
-    --border: rgba(255,255,255,0.08);
-    --card: rgba(255,255,255,0.04);
-  }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Syne', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  a { color: inherit; text-decoration: none; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #080d1a;
+  --navy2: #0d1526;
+  --navy3: #121d35;
+  --cyan: #00d4ff;
+  --cyan-dim: rgba(0,212,255,0.12);
+  --cyan-border: rgba(0,212,255,0.22);
+  --gold: #f5c842;
+  --gold-dim: rgba(245,200,66,0.12);
+  --green: #22d98a;
+  --text: #e8eef8;
+  --muted: #7a8aaa;
+  --faint: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.07);
+  --card-bg: rgba(13,21,38,0.7);
+  --radius: 14px;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Bricolage Grotesque', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; min-height: 100vh; }
+a { color: inherit; text-decoration: none; }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 3rem;
-    background: rgba(10,10,15,0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; color: var(--accent); }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    font-size: 0.82rem; font-weight: 500; color: var(--muted);
-    letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--text); }
-  .nav-menu-btn {
-    display: none; background: none; border: 1px solid var(--border);
-    color: var(--muted); border-radius: 8px; padding: 8px 12px;
-    cursor: pointer; font-size: 1.1rem; font-family: 'Space Mono', monospace;
-  }
-  .mobile-menu {
-    display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
-    background: rgba(10,10,15,0.97); border-bottom: 1px solid var(--border);
-    padding: 1.5rem 2rem; flex-direction: column; gap: 1.25rem;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { font-size: 0.9rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(8,13,26,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; }
+.nav-logo span { color: var(--cyan); }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--cyan); }
+.nav-cta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; background: var(--cyan); color: var(--navy); padding: 8px 18px; border-radius: 6px; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.2s, transform 0.15s; }
+.nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+.mob-btn { display: none; background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 8px; padding: 7px 12px; cursor: pointer; font-size: 1.1rem; }
+.mob-nav { display: none; position: fixed; top: 61px; left: 0; right: 0; z-index: 199; background: rgba(8,13,26,0.97); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; flex-direction: column; gap: 1.2rem; }
+.mob-nav.open { display: flex; }
+.mob-nav a { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 7rem 3rem 4rem;
-    position: relative; overflow: hidden;
-  }
-  .hero-grid {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(91,228,160,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(91,228,160,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-  }
-  .hero-glow {
-    position: absolute; top: -10%; right: -5%;
-    width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(91,228,160,0.07) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .hero-glow2 {
-    position: absolute; bottom: 0; left: -10%;
-    width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(62,196,255,0.05) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(91,228,160,0.1); border: 1px solid rgba(91,228,160,0.25);
-    border-radius: 100px; padding: 6px 16px;
-    font-family: 'Space Mono', monospace; font-size: 0.72rem;
-    color: var(--accent); margin-bottom: 2rem; width: fit-content;
-    animation: fadeSlideUp 0.6s ease both;
-  }
-  .hero-badge::before {
-    content: ''; width: 8px; height: 8px; border-radius: 50%;
-    background: var(--accent); animation: pulse 2s infinite;
-  }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero h1 {
-    font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 800;
-    line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 0.5rem;
-    animation: fadeSlideUp 0.6s 0.1s ease both;
-  }
-  .hero h1 .line2 { color: var(--accent); }
-  .hero-sub {
-    font-family: 'Space Mono', monospace; font-size: 0.9rem;
-    color: var(--muted); margin: 1.5rem 0 2.5rem;
-    max-width: 540px; line-height: 1.8;
-    animation: fadeSlideUp 0.6s 0.2s ease both;
-  }
-  .hero-cta {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    animation: fadeSlideUp 0.6s 0.3s ease both;
-  }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent); color: #0a0a0f;
-    padding: 13px 26px; border-radius: 8px;
-    font-weight: 700; font-size: 0.88rem; letter-spacing: 0.02em;
-    transition: transform 0.15s, box-shadow 0.2s;
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(91,228,160,0.3); }
-  .btn-outline {
-    display: inline-flex; align-items: center; gap: 8px;
-    border: 1px solid var(--border); color: var(--muted);
-    padding: 13px 26px; border-radius: 8px;
-    font-weight: 500; font-size: 0.88rem;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-outline:hover { border-color: rgba(255,255,255,0.3); color: var(--text); }
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 3rem 5rem; position: relative; overflow: hidden; }
+.hero-mesh { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 70% 60% at 85% 20%, rgba(0,212,255,0.06) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 10% 80%, rgba(34,217,138,0.04) 0%, transparent 60%); }
+.hero-grid { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px); background-size: 56px 56px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--cyan); letter-spacing: 0.12em; text-transform: uppercase; background: var(--cyan-dim); border: 1px solid var(--cyan-border); border-radius: 100px; padding: 7px 18px; width: fit-content; margin-bottom: 2.5rem; animation: fadeUp 0.7s ease both; }
+.eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+.hero h1 { font-size: clamp(3.2rem, 9vw, 7.5rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 0.8rem; animation: fadeUp 0.7s 0.1s ease both; }
+.hero h1 em { font-style: normal; color: var(--cyan); }
+.hero-role { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--muted); margin-bottom: 1.75rem; animation: fadeUp 0.7s 0.15s ease both; }
+.hero-desc { font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 560px; margin-bottom: 3rem; animation: fadeUp 0.7s 0.2s ease both; }
+.hero-desc strong { color: var(--cyan); font-weight: 600; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.28s ease both; }
+.btn-fill { display: inline-flex; align-items: center; gap: 9px; background: var(--cyan); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 14px 28px; border-radius: 9px; transition: transform 0.15s, box-shadow 0.2s; }
+.btn-fill:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,212,255,0.3); }
+.btn-ghost { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; font-weight: 500; padding: 14px 28px; border-radius: 9px; transition: border-color 0.2s, color 0.2s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.25); color: var(--text); }
+.hero-stats { display: flex; gap: 3rem; margin-top: 4.5rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.38s ease both; }
+.hstat-num { font-size: 2.4rem; font-weight: 800; color: var(--cyan); letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 4px; }
+.hstat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; animation: fadeUp 0.7s 0.5s ease both; }
+.scroll-hint::after { content: ''; width: 1px; height: 40px; background: linear-gradient(var(--muted), transparent); animation: scrollLine 1.8s ease-in-out infinite; }
+@keyframes scrollLine { 0%,100%{opacity:0.3;} 50%{opacity:1;} }
 
-  /* STATS */
-  .stats-row {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 14px;
-    margin: 0 3rem 5rem; overflow: hidden;
-  }
-  .stat { background: var(--bg2); padding: 2rem 1.5rem; text-align: center; }
-  .stat-num {
-    font-size: 2.8rem; font-weight: 800; line-height: 1;
-    color: var(--accent); display: block; margin-bottom: 8px;
-    letter-spacing: -0.04em;
-  }
-  .stat-label { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; }
+/* SECTIONS */
+.section { padding: 6rem 3rem; position: relative; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.s-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 0.6rem; display: block; }
+.s-title { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 0.75rem; }
+.s-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.7; max-width: 580px; margin-bottom: 3rem; }
+.divider { border: none; border-top: 1px solid var(--border); }
 
-  /* SECTIONS */
-  section { padding: 5rem 3rem; }
-  .section-tag {
-    font-family: 'Space Mono', monospace; font-size: 0.7rem;
-    color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em;
-    margin-bottom: 0.75rem; display: block;
-  }
-  .section-title {
-    font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
-    letter-spacing: -0.03em; margin-bottom: 3rem;
-  }
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.about-text p { font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
+.about-text p:last-of-type { margin-bottom: 0; }
+.about-text strong { color: var(--text); font-weight: 600; }
+.about-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }
+.about-pill { display: inline-flex; align-items: center; gap: 7px; background: var(--faint); border: 1px solid var(--border); border-radius: 100px; padding: 7px 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); }
+.about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.about-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; transition: border-color 0.2s, transform 0.15s; }
+.about-card:hover { border-color: var(--cyan-border); transform: translateY(-2px); }
+.ac-num { font-size: 1.9rem; font-weight: 800; color: var(--cyan); letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.ac-label { font-size: 0.85rem; font-weight: 700; margin-bottom: 4px; }
+.ac-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
 
-  /* EXPERIENCE */
-  .exp-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;
-    position: relative; overflow: hidden;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .exp-card::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 3px; background: linear-gradient(180deg, var(--accent), transparent);
-  }
-  .exp-card:hover { border-color: rgba(91,228,160,0.2); transform: translateX(4px); }
-  .exp-header {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;
-  }
-  .exp-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 3px; }
-  .exp-company { color: var(--accent); font-size: 0.88rem; font-weight: 600; }
-  .exp-period {
-    font-family: 'Space Mono', monospace; font-size: 0.7rem;
-    color: var(--muted); background: rgba(255,255,255,0.05);
-    padding: 5px 12px; border-radius: 100px; white-space: nowrap;
-    border: 1px solid var(--border);
-  }
-  .exp-points { list-style: none; }
-  .exp-points li {
-    font-size: 0.88rem; color: var(--muted); line-height: 1.75;
-    padding: 3px 0 3px 1.4rem; position: relative;
-  }
-  .exp-points li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.78rem; top: 5px; }
+/* SKILLS */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.skill-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: border-color 0.2s, transform 0.15s; }
+.skill-block:hover { border-color: var(--cyan-border); transform: translateY(-2px); }
+.sb-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1.2rem; }
+.sb-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; }
+.sb-dot.gold { background: var(--gold); }
+.sb-dot.green { background: var(--green); }
+.sb-dot.purple { background: #a78bfa; }
+.sb-dot.orange { background: #fb923c; }
+.sb-dot.rose { background: #fb7185; }
+.sb-title { font-size: 0.88rem; font-weight: 700; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag { font-family: 'JetBrains Mono', monospace; font-size: 0.67rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 5px; padding: 3px 9px; color: var(--muted); }
 
-  /* SKILLS */
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-  .skill-cat {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.5rem;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .skill-cat:hover { border-color: rgba(91,228,160,0.2); transform: translateY(-2px); }
-  .skill-cat-title {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--accent2); margin-bottom: 1rem;
-  }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill-tag {
-    font-family: 'Space Mono', monospace; font-size: 0.68rem;
-    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-    border-radius: 6px; padding: 4px 10px; color: var(--muted);
-  }
-  .skill-tag.primary {
-    background: rgba(91,228,160,0.1); border-color: rgba(91,228,160,0.25);
-    color: var(--accent);
-  }
+/* EXPERIENCE */
+.exp-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 1.5rem; transition: border-color 0.2s; }
+.exp-block:hover { border-color: var(--cyan-border); }
+.exp-header { padding: 2rem; border-bottom: 1px solid var(--border); display: flex; gap: 1.25rem; align-items: flex-start; }
+.exp-icon { width: 46px; height: 46px; border-radius: 10px; flex-shrink: 0; background: var(--cyan-dim); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+.exp-icon.g { background: var(--gold-dim); border-color: rgba(245,200,66,0.25); }
+.exp-icon.p { background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.22); }
+.exp-meta { flex: 1; min-width: 0; }
+.exp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 3px; }
+.exp-company { font-size: 0.88rem; font-weight: 600; color: var(--cyan); margin-bottom: 8px; }
+.exp-company.g { color: var(--gold); }
+.exp-company.p { color: #a78bfa; }
+.badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.67rem; color: var(--muted); background: var(--faint); border: 1px solid var(--border); border-radius: 100px; padding: 4px 12px; }
+.badge.live { color: var(--green); border-color: rgba(34,217,138,0.25); background: rgba(34,217,138,0.08); }
+.badge.live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.badge.award { color: var(--gold); border-color: rgba(245,200,66,0.25); background: var(--gold-dim); }
+.kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+.kpi { background: var(--navy2); padding: 1.25rem 1rem; text-align: center; }
+.kpi-num { font-size: 1.5rem; font-weight: 800; color: var(--cyan); display: block; margin-bottom: 3px; line-height: 1; letter-spacing: -0.04em; }
+.kpi-label { font-size: 0.72rem; font-weight: 600; margin-bottom: 2px; }
+.kpi-desc { font-size: 0.66rem; color: var(--muted); line-height: 1.4; font-family: 'JetBrains Mono', monospace; }
+.exp-body { padding: 2rem; }
+.exp-body-title { font-family: 'JetBrains Mono', monospace; font-size: 0.67rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1rem; }
+.pts { list-style: none; }
+.pts li { font-size: 0.88rem; color: var(--muted); line-height: 1.75; padding: 3px 0 3px 1.4rem; position: relative; }
+.pts li::before { content: '›'; position: absolute; left: 0; color: var(--cyan); font-size: 1rem; line-height: 1.6; }
 
-  /* ACHIEVEMENTS */
-  .achv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .achv-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.75rem; position: relative; overflow: hidden;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .achv-card:hover { border-color: rgba(91,228,160,0.25); transform: translateY(-3px); }
-  .achv-num {
-    font-size: 3rem; font-weight: 800; color: var(--accent);
-    line-height: 1; margin-bottom: 0.5rem; letter-spacing: -0.04em;
-  }
-  .achv-label { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .achv-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
-  .achv-card .bg-icon {
-    position: absolute; right: 1.5rem; top: 1.5rem;
-    font-size: 2rem; opacity: 0.12; pointer-events: none;
-  }
+/* PROJECTS */
+.proj-list { display: flex; flex-direction: column; gap: 1.25rem; }
+.proj-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; display: flex; gap: 1.25rem; align-items: flex-start; transition: border-color 0.2s, transform 0.2s; }
+.proj-card:hover { border-color: var(--cyan-border); transform: translateX(4px); }
+.proj-ico { width: 42px; height: 42px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+.pi1 { background: var(--cyan-dim); border: 1px solid var(--cyan-border); }
+.pi2 { background: rgba(34,217,138,0.1); border: 1px solid rgba(34,217,138,0.22); }
+.pi3 { background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.22); }
+.pi4 { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.22); }
+.proj-status { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; padding: 3px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; float: right; margin-top: -2px; }
+.ps-prod { background: var(--cyan-dim); border: 1px solid var(--cyan-border); color: var(--cyan); }
+.ps-opt  { background: rgba(34,217,138,0.1); border: 1px solid rgba(34,217,138,0.25); color: var(--green); }
+.ps-int  { background: var(--gold-dim); border: 1px solid rgba(245,200,66,0.25); color: var(--gold); }
+.ps-auto { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.25); color: #a78bfa; }
+.proj-body { flex: 1; min-width: 0; }
+.proj-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.proj-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.75rem; }
+.proj-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.proj-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; background: var(--faint); border: 1px solid var(--border); border-radius: 5px; padding: 3px 8px; color: var(--muted); }
 
-  /* AWARD */
-  .award-block {
-    background: linear-gradient(135deg, rgba(91,228,160,0.08), rgba(62,196,255,0.05));
-    border: 1px solid rgba(91,228,160,0.2);
-    border-radius: 16px; padding: 2.5rem;
-    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
-  }
-  .award-badge {
-    width: 80px; height: 80px; border-radius: 50%; flex-shrink: 0;
-    background: rgba(91,228,160,0.12); border: 2px solid rgba(91,228,160,0.3);
-    display: flex; align-items: center; justify-content: center; font-size: 2rem;
-  }
-  .award-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
-  .award-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; max-width: 600px; }
+/* CERTIFICATIONS */
+.certs-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+.cert-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; display: flex; align-items: center; gap: 14px; transition: border-color 0.2s, transform 0.15s; }
+.cert-card:hover { border-color: var(--cyan-border); transform: translateY(-2px); }
+.cert-ico { width: 42px; height: 42px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+.ci-sap { background: var(--cyan-dim); border: 1px solid var(--cyan-border); }
+.ci-aws { background: var(--gold-dim); border: 1px solid rgba(245,200,66,0.22); }
+.ci-az  { background: rgba(0,120,255,0.12); border: 1px solid rgba(0,120,255,0.25); }
+.ci-ai  { background: rgba(251,99,107,0.1); border: 1px solid rgba(251,99,107,0.22); }
+.ci-aw  { background: var(--gold-dim); border: 1px solid rgba(245,200,66,0.3); }
+.cert-name { font-size: 0.85rem; font-weight: 600; line-height: 1.4; margin-bottom: 3px; }
+.cert-issuer { font-family: 'JetBrains Mono', monospace; font-size: 0.67rem; color: var(--muted); }
+.cert-full { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(245,200,66,0.07), rgba(0,212,255,0.04)); border-color: rgba(245,200,66,0.2); }
+.cert-full .cert-name { font-size: 0.95rem; }
+.cert-full:hover { border-color: rgba(245,200,66,0.4); }
 
-  /* CERTS */
-  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-  .cert-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.25rem;
-    display: flex; align-items: flex-start; gap: 12px;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .cert-card:hover { border-color: rgba(91,228,160,0.2); transform: translateY(-2px); }
-  .cert-icon {
-    width: 38px; height: 38px; border-radius: 8px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
-  }
-  .cert-icon.sap  { background: rgba(91,228,160,0.12); }
-  .cert-icon.aws  { background: rgba(240,192,96,0.12); }
-  .cert-icon.az   { background: rgba(62,196,255,0.12); }
-  .cert-icon.ai   { background: rgba(240,100,100,0.12); }
-  .cert-name { font-size: 0.82rem; font-weight: 600; line-height: 1.4; margin-bottom: 4px; }
-  .cert-year { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--muted); }
+/* CONTACT */
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-tagline { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+.contact-tagline em { font-style: normal; color: var(--cyan); }
+.contact-intro { font-size: 1rem; color: var(--muted); line-height: 1.8; margin: 1.5rem 0 2rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.contact-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; display: flex; align-items: flex-start; gap: 12px; transition: border-color 0.2s, transform 0.15s; }
+.contact-item:hover { border-color: var(--cyan-border); transform: translateY(-2px); }
+.c-ico { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; background: var(--cyan-dim); border: 1px solid var(--cyan-border); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+.c-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+.c-val { font-size: 0.82rem; font-weight: 600; color: var(--cyan); word-break: break-all; }
+.quick-links { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; }
+.ql-title { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.25rem; }
+.ql-link { display: block; font-size: 0.9rem; font-weight: 600; color: var(--cyan); padding: 0.5rem 0; border-bottom: 1px solid var(--border); transition: opacity 0.2s; }
+.ql-link:last-of-type { border-bottom: none; }
+.ql-link:hover { opacity: 0.7; }
 
-  /* CONTACT */
-  .contact-intro { font-size: 1rem; color: var(--muted); max-width: 500px; margin-bottom: 2rem; line-height: 1.7; }
-  .contact-row { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .contact-pill {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 100px; padding: 11px 22px;
-    font-size: 0.85rem; color: var(--muted);
-    transition: border-color 0.2s, color 0.2s, transform 0.15s;
-  }
-  .contact-pill:hover { border-color: rgba(91,228,160,0.35); color: var(--text); transform: translateY(-1px); }
-  .contact-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+/* FOOTER */
+footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-l { font-size: 0.8rem; color: var(--muted); }
+.footer-r { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: rgba(255,255,255,0.18); }
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 3rem; display: flex;
-    justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-name { font-size: 0.8rem; color: var(--muted); }
-  .footer-stack { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: rgba(255,255,255,0.2); }
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* DIVIDER */
-  .divider { border: none; border-top: 1px solid var(--border); }
-
-  /* SCROLL REVEAL */
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 640px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .nav-menu-btn { display: block; }
-    .hero { padding: 5.5rem 1.5rem 3rem; }
-    section { padding: 3.5rem 1.5rem; }
-    .stats-row { margin: 0 1.5rem 3rem; grid-template-columns: repeat(2, 1fr); }
-    footer { padding: 1.5rem; }
-    .award-block { flex-direction: column; }
-  }
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .skills-grid { grid-template-columns: repeat(2,1fr); }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links, .nav-cta { display: none; }
+  .mob-btn { display: block; }
+  .hero { padding: 6.5rem 1.5rem 4rem; }
+  .hero-stats { gap: 2rem; }
+  .section { padding: 4rem 1.5rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .about-cards { grid-template-columns: 1fr 1fr; }
+  .kpis { grid-template-columns: repeat(2,1fr); }
+  .certs-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .proj-card { flex-direction: column; }
+  .exp-header { flex-direction: column; }
+  footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 3rem; }
+  .hero-actions { flex-direction: column; }
+  .btn-fill, .btn-ghost { justify-content: center; }
+  .hero-stats { flex-direction: column; gap: 1.5rem; }
+  .about-cards { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">SAI KUMAR</div>
+  <div class="nav-logo">Sai<span>.</span></div>
   <div class="nav-links">
-    <a href="#experience">Experience</a>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#achievements">Achievements</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
   </div>
-  <button class="nav-menu-btn" id="menuBtn">☰</button>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+  <button class="mob-btn" id="menuBtn">☰</button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#experience" onclick="closeMobile()">Experience</a>
-  <a href="#skills" onclick="closeMobile()">Skills</a>
-  <a href="#achievements" onclick="closeMobile()">Achievements</a>
-  <a href="#certifications" onclick="closeMobile()">Certifications</a>
-  <a href="#contact" onclick="closeMobile()">Contact</a>
+<div class="mob-nav" id="mobNav">
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#skills" onclick="closeMob()">Skills</a>
+  <a href="#experience" onclick="closeMob()">Experience</a>
+  <a href="#projects" onclick="closeMob()">Projects</a>
+  <a href="#certifications" onclick="closeMob()">Certifications</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
+  <div class="hero-mesh"></div>
   <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-badge">Available for SAP Data Engineering roles</div>
-  <h1>
-    Sai Kumar<br>
-    <span class="line2">Satapathy</span>
-  </h1>
-  <p class="hero-sub">SAP Datasphere &amp; BW/4HANA Engineer building scalable data pipelines, delta-based replication, and cloud-integrated analytics — currently at Accenture.</p>
-  <div class="hero-cta">
-    <a href="https://linkedin.com/in/satapathy-sai" class="btn-primary" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
-    <a href="mailto:saikumar.cse2023@gmail.com" class="btn-outline">saikumar.cse2023@gmail.com</a>
+  <div class="eyebrow">Available for opportunities</div>
+  <h1>Sai Kumar<br><em>Satapathy</em></h1>
+  <p class="hero-role">SAP BW &amp; Datasphere Developer</p>
+  <p class="hero-desc">Building high-performance enterprise data platforms with <strong>2+ years of expertise</strong> in SAP Datasphere, S/4HANA integration, and cloud-native analytics — delivering <strong>55% faster</strong> data processing and <strong>46% improved</strong> query performance.</p>
+  <div class="hero-actions">
+    <a href="https://linkedin.com/in/satapathy-sai" class="btn-fill" target="_blank" rel="noopener">View My Work ↗</a>
+    <a href="mailto:saikumar212000@gmail.com" class="btn-ghost">Get in Touch ✉</a>
   </div>
+  <div class="hero-stats">
+    <div><span class="hstat-num">2+</span><span class="hstat-label">Years Experience</span></div>
+    <div><span class="hstat-num">100+</span><span class="hstat-label">Defects Resolved</span></div>
+    <div><span class="hstat-num">5</span><span class="hstat-label">Certifications</span></div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
 </section>
 
-<!-- STATS -->
-<div class="stats-row reveal">
-  <div class="stat"><span class="stat-num">55%</span><span class="stat-label">Faster pipeline processing</span></div>
-  <div class="stat"><span class="stat-num">46%</span><span class="stat-label">BEx query improvement</span></div>
-  <div class="stat"><span class="stat-num">100+</span><span class="stat-label">Production defects resolved</span></div>
-  <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Years enterprise experience</span></div>
-</div>
+<hr class="divider">
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <span class="section-tag">// work history</span>
-  <h2 class="section-title">Experience</h2>
-
-  <div class="exp-card reveal">
-    <div class="exp-header">
-      <div>
-        <div class="exp-title">SAP Datasphere Developer</div>
-        <div class="exp-company">Accenture · Bengaluru</div>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <span class="s-tag">// who i am</span>
+    <h2 class="s-title reveal">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a passionate <strong>SAP BW &amp; Datasphere Developer at Accenture</strong>, building enterprise data platforms for one of the world's largest telecommunications companies.</p>
+        <p>My expertise lies at the intersection of data engineering and enterprise analytics. I specialize in designing <strong>scalable delta-based replication models</strong>, optimizing complex data pipelines, and integrating SAP ecosystems with cloud-native AWS infrastructure. I thrive on turning messy, high-volume enterprise data into clean, reliable analytical assets that drive business decisions.</p>
+        <p>I hold <strong>5 professional certifications</strong> spanning SAP, AWS, Azure, and Generative AI — demonstrating a commitment to staying ahead in a rapidly evolving technology landscape. My <strong>ACE Award recognition</strong> at Accenture reflects my dedication to delivery excellence and quality.</p>
+        <div class="about-pills">
+          <span class="about-pill">📍 Bengaluru, Karnataka</span>
+          <span class="about-pill">🏢 Accenture</span>
+          <span class="about-pill">🎓 B.Tech CSE, 8.75 CGPA</span>
+          <span class="about-pill">🏆 ACE Award — FY25 Q4</span>
+        </div>
       </div>
-      <span class="exp-period">Dec 2024 – Present</span>
+      <div class="about-cards reveal">
+        <div class="about-card">
+          <div class="ac-num">55%</div>
+          <div class="ac-label">Performance Boost</div>
+          <div class="ac-desc">Improved end-to-end data processing by redesigning BW extraction frameworks and enhancing CMOD modules.</div>
+        </div>
+        <div class="about-card">
+          <div class="ac-num">46%</div>
+          <div class="ac-label">Faster Queries</div>
+          <div class="ac-desc">Optimized BEx queries using aggregations, variables, and restricted key figures across 40+ reports.</div>
+        </div>
+        <div class="about-card">
+          <div class="ac-num">3–4 hrs</div>
+          <div class="ac-label">Saved Weekly</div>
+          <div class="ac-desc">Automated pipelines via Task Chains, eliminating repetitive manual scheduling effort every week.</div>
+        </div>
+        <div class="about-card">
+          <div class="ac-num">100%</div>
+          <div class="ac-label">Platform Reliability</div>
+          <div class="ac-desc">Maintained high availability across dev, test, and production with zero SLA breaches.</div>
+        </div>
+      </div>
     </div>
-    <ul class="exp-points">
-      <li>Designed Replication Flows to extract CDS-based data from SAP S/4HANA into SAP Datasphere using delta-based CDC mechanisms for near-real-time incremental loads.</li>
-      <li>Configured bi-directional S3 integration: outbound Datasphere exports (CSV) for downstream reporting; inbound Data Flows to load external datasets into Datasphere.</li>
-      <li>Developed optimized SQL Views and Graphical Views with joins, filters, calculated columns, and semantic modeling layers for SAP Analytics Cloud consumption.</li>
-      <li>Built Transformation Flows on local tables to support delta handling, data harmonization, and business rule application.</li>
-      <li>Automated end-to-end ETL pipelines using Task Chains, DTPs, Transformations, and Process Chains — supporting daily, weekly, and real-time data loads.</li>
-      <li>Resolved 100+ production defects and enhancement tickets with zero SLA breaches across multiple concurrent project phases.</li>
-      <li>Achieved 46% faster BEx query performance by optimizing aggregations, variables, restricted key figures, and filters across 40+ queries.</li>
-    </ul>
   </div>
-
-  <div class="exp-card reveal">
-    <div class="exp-header">
-      <div>
-        <div class="exp-title">Packaged App Development Associate</div>
-        <div class="exp-company">Accenture · Bengaluru</div>
-      </div>
-      <span class="exp-period">Feb 2024 – Nov 2025</span>
-    </div>
-    <ul class="exp-points">
-      <li>Redesigned SAP BW extraction framework — achieved 55% improvement in end-to-end data processing performance across daily, weekly, and real-time pipelines.</li>
-      <li>Enhanced CMOD function modules to reduce full load frequency and improve transformation logic.</li>
-      <li>Automated data load monitoring and proactive failure handling, reducing operational support effort by 3–4 hours per week.</li>
-      <li>Collaborated with functional teams to translate business KPIs into optimized analytical data models enabling better reporting and decision-making.</li>
-      <li>Scheduled and managed process chains in RSA1 and created background jobs using SM36 to automate data operations.</li>
-    </ul>
-  </div>
-
-  <!-- <div class="exp-card reveal">
-    <div class="exp-header">
-      <div>
-        <div class="exp-title">Summer Intern</div>
-        <div class="exp-company">Ingenious-Tech</div>
-      </div>
-      <span class="exp-period">Nov 2021 – Jun 2022</span>
-    </div>
-    <ul class="exp-points">
-      <li>Completed AWS industry training covering EC2, S3, IAM, VPC, and cloud architecture fundamentals.</li>
-      <li>Gained hands-on experience with Docker and Kubernetes container orchestration.</li>
-    </ul>
-  </div> -->
 </section>
 
 <hr class="divider">
 
 <!-- SKILLS -->
-<section id="skills">
-  <span class="section-tag">// technical stack</span>
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">SAP Core</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">SAP Datasphere</span>
-        <span class="skill-tag primary">SAP BW/4HANA</span>
-        <span class="skill-tag primary">SAP Business Data Cloud</span>
-        <span class="skill-tag">SAP Analytics Cloud</span>
-        <span class="skill-tag">BEx Queries</span>
-        <span class="skill-tag">Process Chains</span>
-        <span class="skill-tag">DTP</span>
-        <span class="skill-tag">ABAP</span>
-        <span class="skill-tag">CMOD</span>
-        <span class="skill-tag">CDS Extraction</span>
+<section class="section" id="skills">
+  <div class="section-inner">
+    <span class="s-tag">// what i know</span>
+    <h2 class="s-title reveal">Technical Skills</h2>
+    <p class="s-sub reveal">A comprehensive toolkit built through real-world enterprise data engineering at scale.</p>
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot"></div><span class="sb-title">SAP Datasphere</span></div>
+        <div class="tags">
+          <span class="tag">Replication Flows</span><span class="tag">Data Flows</span><span class="tag">Transformation Flows</span><span class="tag">SQL Views</span><span class="tag">Graphical Views</span><span class="tag">Task Chains</span><span class="tag">CDC / Delta Loads</span><span class="tag">S/4HANA Integration</span><span class="tag">SAP Analytics Cloud</span><span class="tag">Semantic Modeling</span>
+        </div>
       </div>
-    </div>
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">Data Modeling</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">SQL Views</span>
-        <span class="skill-tag primary">Graphical Views</span>
-        <span class="skill-tag">Delta Replication (CDC)</span>
-        <span class="skill-tag">Semantic Modeling</span>
-        <span class="skill-tag">SAP HANA</span>
-        <span class="skill-tag">Transformation Flows</span>
-        <span class="skill-tag">Replication Flows</span>
-        <span class="skill-tag">InfoSources</span>
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot green"></div><span class="sb-title">SAP BW/4HANA</span></div>
+        <div class="tags">
+          <span class="tag">ADSOs</span><span class="tag">Composite Providers</span><span class="tag">BEx Queries</span><span class="tag">DTPs</span><span class="tag">Transformations</span><span class="tag">Process Chains</span><span class="tag">Virtual Providers</span><span class="tag">CMOD Function Modules</span><span class="tag">InfoSources</span><span class="tag">RSA1</span><span class="tag">SM36</span>
+        </div>
       </div>
-    </div>
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">Cloud &amp; Integration</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">AWS S3</span>
-        <span class="skill-tag primary">AWS IAM</span>
-        <span class="skill-tag">Amazon RDS</span>
-        <span class="skill-tag">AWS EKS</span>
-        <span class="skill-tag">Azure Fundamentals</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Kubernetes</span>
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot gold"></div><span class="sb-title">Database &amp; SQL</span></div>
+        <div class="tags">
+          <span class="tag">SAP HANA</span><span class="tag">SQL Script</span><span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">Amazon RDS</span><span class="tag">AMDP</span>
+        </div>
       </div>
-    </div>
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">Languages &amp; DevOps</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">SQL</span>
-        <span class="skill-tag primary">Python</span>
-        <span class="skill-tag">Shell Scripting</span>
-        <span class="skill-tag">ABAP</span>
-        <span class="skill-tag">C</span>
-        <span class="skill-tag">Jenkins</span>
-        <span class="skill-tag">Terraform</span>
-        <span class="skill-tag">GitHub</span>
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot purple"></div><span class="sb-title">Cloud &amp; DevOps</span></div>
+        <div class="tags">
+          <span class="tag">AWS S3</span><span class="tag">AWS EKS</span><span class="tag">AWS IAM</span><span class="tag">AWS VPC</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">Terraform</span><span class="tag">GitHub</span><span class="tag">Azure Fundamentals</span>
+        </div>
       </div>
-    </div>
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">Databases</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">SAP HANA</span>
-        <span class="skill-tag">Oracle</span>
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">Amazon RDS</span>
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot orange"></div><span class="sb-title">SAP ABAP</span></div>
+        <div class="tags">
+          <span class="tag">ABAP Routines</span><span class="tag">Start / End / Expert Routines</span><span class="tag">Custom Extractors</span><span class="tag">HANA Views</span><span class="tag">Debugging</span><span class="tag">OOPs</span>
+        </div>
       </div>
-    </div>
-    <div class="skill-cat reveal">
-      <div class="skill-cat-title">AI &amp; Emerging</div>
-      <div class="skill-tags">
-        <span class="skill-tag primary">Agentic AI</span>
-        <span class="skill-tag">Generative AI</span>
-        <span class="skill-tag">SAP Business Data Cloud</span>
+      <div class="skill-block reveal">
+        <div class="sb-header"><div class="sb-dot rose"></div><span class="sb-title">Programming &amp; Methods</span></div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Shell Scripting</span><span class="tag">C</span><span class="tag">Incident Management</span><span class="tag">SLA Adherence</span><span class="tag">Agile Delivery</span><span class="tag">Agentic AI</span><span class="tag">Generative AI</span>
+        </div>
       </div>
     </div>
   </div>
@@ -510,177 +380,234 @@
 
 <hr class="divider">
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <span class="section-tag">// key impact</span>
-  <h2 class="section-title">Achievements</h2>
-  <div class="achv-grid">
-    <div class="achv-card reveal">
-      <div class="bg-icon">⚡</div>
-      <div class="achv-num">55%</div>
-      <div class="achv-label">Faster data processing</div>
-      <div class="achv-desc">Redesigned SAP BW extraction framework for AT&amp;T, improving end-to-end performance across daily, weekly, and real-time pipeline runs.</div>
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <span class="s-tag">// career</span>
+    <h2 class="s-title reveal">Work Experience</h2>
+
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <div class="exp-icon">🗄</div>
+        <div class="exp-meta">
+          <div class="exp-title">SAP BW &amp; Datasphere Developer</div>
+          <div class="exp-company">Accenture · Enterprise Data &amp; Analytics</div>
+          <div class="badge-row">
+            <span class="badge live">Dec 2024 – Present · Current Role</span>
+            <span class="badge award">🏆 ACE Award — FY25 Q4</span>
+          </div>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><span class="kpi-num">55%</span><div class="kpi-label">Processing Improvement</div><div class="kpi-desc">Redesigned BW extraction frameworks with enhanced CMOD modules</div></div>
+        <div class="kpi"><span class="kpi-num">46%</span><div class="kpi-label">Query Performance Gain</div><div class="kpi-desc">Optimized BEx queries with aggregations, variables &amp; key figures</div></div>
+        <div class="kpi"><span class="kpi-num">100+</span><div class="kpi-label">Defects Resolved</div><div class="kpi-desc">Zero SLA breaches across multiple project phases</div></div>
+        <div class="kpi"><span class="kpi-num">3–4 hrs</span><div class="kpi-label">Weekly Time Saved</div><div class="kpi-desc">Automated pipelines via Task Chains eliminating manual effort</div></div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-body-title">Key Responsibilities</div>
+        <ul class="pts">
+          <li>Ensured high availability, performance, and quality of SAP Datasphere across development, test, and production environments.</li>
+          <li>Designed and implemented Replication Flows to extract CDS-based delta data from SAP S/4HANA using CDC mechanisms, enabling near-real-time incremental loads.</li>
+          <li>Developed optimized SQL Views and Graphical Views with joins, filters, calculated columns, and semantic modeling layers for SAP Analytics Cloud consumption.</li>
+          <li>Built Transformation Flows on local tables to support delta handling, data harmonization, and business rule application.</li>
+          <li>Configured bi-directional AWS S3 integration: outbound CSV exports for downstream reporting and inbound Data Flows for external dataset ingestion.</li>
+          <li>Automated end-to-end ETL pipelines using Task Chains, DTPs, Transformations, and Process Chains supporting daily, weekly, and real-time data loads via virtual providers.</li>
+          <li>Independently managed change requests and production issues across multiple project phases, ensuring consistent on-time delivery.</li>
+        </ul>
+      </div>
     </div>
-    <div class="achv-card reveal">
-      <div class="bg-icon">📊</div>
-      <div class="achv-num">46%</div>
-      <div class="achv-label">Query performance gain</div>
-      <div class="achv-desc">Optimized 40+ BEx queries using aggregations, restricted key figures, and variables — delivering measurably faster execution for reporting teams.</div>
+
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <div class="exp-icon g">📊</div>
+        <div class="exp-meta">
+          <div class="exp-title">Packaged App Development Associate</div>
+          <div class="exp-company g">Accenture</div>
+          <div class="badge-row"><span class="badge">Feb 2024 – Nov 2025</span></div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="pts">
+          <li>Designed and optimized SAP BW data models and extraction frameworks from SAP ECC, improving end-to-end data processing performance by 55%.</li>
+          <li>Collaborated with functional teams to translate business KPIs into optimized analytical data models enabling better reporting and decision-making.</li>
+          <li>Automated data load monitoring and proactive failure handling, reducing operational support effort by 3–4 hours per week.</li>
+          <li>Scheduled and managed process chains in RSA1 and created background jobs using SM36 to automate and streamline data operations.</li>
+          <li>Provided defect management and post-go-live support, ensuring stability and performance of BW/BI environments across all phases.</li>
+        </ul>
+      </div>
     </div>
-    <div class="achv-card reveal">
-      <div class="bg-icon">🤖</div>
-      <div class="achv-num">4 hrs</div>
-      <div class="achv-label">Saved weekly via automation</div>
-      <div class="achv-desc">Automated end-to-end Datasphere pipelines via Task Chains, eliminating manual scheduling steps and reducing operational overhead every week.</div>
-    </div>
-    <div class="achv-card reveal">
-      <div class="bg-icon">🛡️</div>
-      <div class="achv-num">100+</div>
-      <div class="achv-label">Defects resolved</div>
-      <div class="achv-desc">Independently resolved 100+ production defects and enhancement requests with zero SLA breaches, maintaining stability across all project phases.</div>
+
+    <div class="exp-block reveal">
+      <div class="exp-header">
+        <div class="exp-icon p">☁️</div>
+        <div class="exp-meta">
+          <div class="exp-title">Summer Intern</div>
+          <div class="exp-company p">Ingenious-Tech</div>
+          <div class="badge-row"><span class="badge">Nov 2021 – Jun 2022</span></div>
+        </div>
+      </div>
+      <div class="exp-body">
+        <ul class="pts">
+          <li>Completed AWS industry training covering EC2, S3, IAM, VPC, and cloud architecture fundamentals.</li>
+          <li>Gained hands-on experience with Docker and Kubernetes container orchestration.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- AWARD
-<section>
-  <span class="section-tag">// recognition</span>
-  <h2 class="section-title">Award</h2>
-  <div class="award-block reveal">
-    <div class="award-badge">🏆</div>
-    <div>
-      <div class="award-title">ACE Award — FY25 Q4, Accenture</div>
-      <div class="award-desc">Awarded for outstanding delivery on the AT&amp;T Datasphere migration project. Recognized by project leadership for independently managing production stabilization during a critical cutover window — ensuring zero disruption to live operations across the enterprise.</div>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <span class="s-tag">// what i've built</span>
+    <h2 class="s-title reveal">Featured Projects</h2>
+    <p class="s-sub reveal">Enterprise-scale data engineering initiatives delivered at Accenture. All projects delivered under NDA — contact for detailed case studies.</p>
+    <div class="proj-list">
+
+      <div class="proj-card reveal">
+        <div class="proj-ico pi1">🏗</div>
+        <div class="proj-body">
+          <span class="proj-status ps-prod">Production</span>
+          <div class="proj-name">Enterprise Data Platform Migration</div>
+          <div class="proj-sub">SAP Datasphere | S/4HANA | AWS S3</div>
+          <div class="proj-desc">Architected and delivered a scalable enterprise analytics platform, extracting CDS-based delta data from SAP S/4HANA via CDC mechanisms into SAP Datasphere, with fully automated Task Chain pipelines and bi-directional outbound S3 integration for downstream reporting.</div>
+          <div class="proj-tags"><span class="proj-tag">SAP Datasphere</span><span class="proj-tag">S/4HANA</span><span class="proj-tag">CDC</span><span class="proj-tag">AWS S3</span><span class="proj-tag">Task Chains</span><span class="proj-tag">Replication Flows</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-ico pi2">📈</div>
+        <div class="proj-body">
+          <span class="proj-status ps-opt">Optimized</span>
+          <div class="proj-name">BW Data Model Optimization</div>
+          <div class="proj-sub">SAP BW/4HANA | ECC | BEx</div>
+          <div class="proj-desc">Redesigned SAP BW data models and extraction frameworks from ECC with enhanced CMOD function modules, achieving 55% improvement in end-to-end data processing. Optimized 40+ BEx queries for 46% faster analytical reporting using aggregations, variables, and restricted key figures.</div>
+          <div class="proj-tags"><span class="proj-tag">SAP BW/4HANA</span><span class="proj-tag">BEx</span><span class="proj-tag">ADSOs</span><span class="proj-tag">CMOD</span><span class="proj-tag">Performance Tuning</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-ico pi3">🔗</div>
+        <div class="proj-body">
+          <span class="proj-status ps-int">Integrated</span>
+          <div class="proj-name">Multi-Source Data Integration</div>
+          <div class="proj-sub">SAP Datasphere | AWS | External APIs</div>
+          <div class="proj-desc">Built bi-directional data integration pipelines — inbound Data Flows from Amazon S3 for external datasets and outbound CSV exports — enabling seamless multi-source data consolidation within SAP Datasphere. Developed SQL Views and Graphical Views with semantic modeling for analytics consumption.</div>
+          <div class="proj-tags"><span class="proj-tag">Data Flows</span><span class="proj-tag">Amazon S3</span><span class="proj-tag">CSV Integration</span><span class="proj-tag">SQL Views</span><span class="proj-tag">Multi-source</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-ico pi4">⚙️</div>
+        <div class="proj-body">
+          <span class="proj-status ps-auto">Automated</span>
+          <div class="proj-name">Automated ETL Pipeline Framework</div>
+          <div class="proj-sub">DTPs | Process Chains | Virtual Providers</div>
+          <div class="proj-desc">Engineered a fully automated ETL framework using DTPs, Transformations, and Process Chains enabling reliable daily, weekly, and real-time data loads. Implemented proactive failure-handling logic that reduced operational support effort by 3–4 hours per week across production workflows.</div>
+          <div class="proj-tags"><span class="proj-tag">ETL</span><span class="proj-tag">Process Chains</span><span class="proj-tag">DTPs</span><span class="proj-tag">Virtual Providers</span><span class="proj-tag">Automation</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<hr class="divider"> -->
+<hr class="divider">
 
 <!-- CERTIFICATIONS -->
-<section id="certifications">
-  <span class="section-tag">// credentials</span>
-  <h2 class="section-title">Certifications</h2>
-  <div class="certs-grid">
-    <div class="cert-card reveal">
-      <div class="cert-icon sap">🟢</div>
-      <div>
-        <div class="cert-name">SAP Certified Associate – SAP Business Data Cloud</div>
-        <div class="cert-year">SAP · 2025</div>
-      </div>
+<section class="section" id="certifications">
+  <div class="section-inner">
+    <span class="s-tag">// credentials</span>
+    <h2 class="s-title reveal">Certifications</h2>
+    <p class="s-sub reveal">Industry-recognized certifications validating expertise across SAP, cloud, and emerging technologies.</p>
+    <div class="certs-grid">
+      <div class="cert-card reveal"><div class="cert-ico ci-sap">🛡</div><div><div class="cert-name">SAP Certified Associate – SAP Business Data Cloud</div><div class="cert-issuer">SAP · 2025</div></div></div>
+      <div class="cert-card reveal"><div class="cert-ico ci-sap">🛡</div><div><div class="cert-name">SAP Certified Associate – Data Engineer, Data Fabric</div><div class="cert-issuer">SAP · 2024</div></div></div>
+      <div class="cert-card reveal"><div class="cert-ico ci-aws">☁️</div><div><div class="cert-name">AWS Certified Cloud Practitioner (CLF-C02)</div><div class="cert-issuer">Amazon Web Services</div></div></div>
+      <div class="cert-card reveal"><div class="cert-ico ci-az">🔷</div><div><div class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</div><div class="cert-issuer">Microsoft</div></div></div>
+      <div class="cert-card reveal"><div class="cert-ico ci-ai">🤖</div><div><div class="cert-name">Generative AI Leader Certification</div><div class="cert-issuer">Industry Certification</div></div></div>
+      <div class="cert-card cert-full reveal"><div class="cert-ico ci-aw">🏆</div><div><div class="cert-name">ACE Award — FY25 Q4 · Outstanding Performance &amp; Delivery Excellence</div><div class="cert-issuer">Accenture · Awarded for outstanding delivery on enterprise Datasphere migration. Recognized for independently managing production stabilization during a critical cutover window.</div></div></div>
     </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon sap">🟢</div>
-      <div>
-        <div class="cert-name">SAP Certified Associate – Data Engineer, Data Fabric</div>
-        <div class="cert-year">SAP · 2024</div>
-      </div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon aws">🟡</div>
-      <div>
-        <div class="cert-name">AWS Certified Cloud Practitioner (CLF-C02)</div>
-        <div class="cert-year">Amazon Web Services</div>
-      </div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon az">🔵</div>
-      <div>
-        <div class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
-        <div class="cert-year">Microsoft</div>
-      </div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon ai">🔴</div>
-      <div>
-        <div class="cert-name">Generative AI Leader Certification</div>
-        <div class="cert-year">Industry Certification</div>
-      </div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon ai">🔴</div>
-      <div>
-        <div class="cert-name">Reinvention with Agentic AI</div>
-        <div class="cert-year">Accenture Learning</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<hr class="divider">
-
-<!-- EDUCATION -->
-<section>
-  <span class="section-tag">// education</span>
-  <h2 class="section-title">Education</h2>
-  <div class="exp-card reveal">
-    <div class="exp-header">
-      <div>
-        <div class="exp-title">B.Tech — Computer Science &amp; Engineering</div>
-        <div class="exp-company">Silicon Institute of Technology, Bhubaneswar</div>
+    <div style="margin-top:1.5rem;" class="reveal">
+      <div class="cert-card" style="padding:1.5rem;">
+        <div class="cert-ico ci-sap">🎓</div>
+        <div>
+          <div class="cert-name" style="font-size:1rem;">B.Tech — Computer Science &amp; Engineering</div>
+          <div style="color:var(--cyan);font-size:0.85rem;font-weight:600;margin:3px 0;">Silicon Institute of Technology, Bhubaneswar</div>
+          <div class="cert-issuer">Jun 2019 – Jun 2023 &nbsp;·&nbsp; CGPA: 8.75 / 10 &nbsp;·&nbsp; Top 10 Best Student Management Project &nbsp;·&nbsp; Top 3 Performer</div>
+        </div>
       </div>
-      <span class="exp-period">Jun 2019 – Jun 2023</span>
     </div>
-    <ul class="exp-points">
-      <li>CGPA: 8.75 / 10</li>
-      <li>Recognized in Top 10 for Best Student Management Project</li>
-    </ul>
   </div>
 </section>
 
 <hr class="divider">
 
 <!-- CONTACT -->
-<section id="contact">
-  <span class="section-tag">// get in touch</span>
-  <h2 class="section-title">Contact</h2>
-  <p class="contact-intro">Open to SAP Data Engineering roles, consulting opportunities, and collaborations in the SAP Datasphere / Business Data Cloud ecosystem.</p>
-  <div class="contact-row">
-    <a href="mailto:saikumar212000@gmail.com" class="contact-pill"><span class="dot"></span>saikumar212000@gmail.com</a>
-    <a href="mailto:saikumar.cse2023@gmail.com" class="contact-pill"><span class="dot"></span>saikumar.cse2023@gmail.com</a>
-    <a href="tel:+916370647723" class="contact-pill"><span class="dot"></span>+91-6370647723</a>
-    <a href="https://linkedin.com/in/satapathy-sai" class="contact-pill" target="_blank" rel="noopener"><span class="dot"></span>linkedin.com/in/satapathy-sai</a>
-    <a href="https://dev.to/kumarsai21" class="contact-pill" target="_blank" rel="noopener"><span class="dot"></span>dev.to/kumarsai21</a>
-    <a href="https://www.credly.com/users/sai.kumar" class="contact-pill" target="_blank" rel="noopener"><span class="dot"></span>Credly Badges</a>
+<section class="section" id="contact">
+  <div class="section-inner">
+    <span class="s-tag">// let's connect</span>
+    <div class="contact-wrap">
+      <div class="reveal">
+        <h2 class="contact-tagline">Get in<br><em>Touch</em></h2>
+        <p class="contact-intro">Open to new opportunities in enterprise data engineering, SAP analytics, and cloud-native data platform roles. Let's build something great together.</p>
+        <div class="contact-grid">
+          <a href="mailto:saikumar212000@gmail.com" class="contact-item"><div class="c-ico">✉️</div><div><div class="c-label">Email</div><div class="c-val">saikumar212000@gmail.com</div></div></a>
+          <a href="tel:+916370647723" class="contact-item"><div class="c-ico">📞</div><div><div class="c-label">Phone</div><div class="c-val">+91 6370647723</div></div></a>
+          <a href="https://linkedin.com/in/satapathy-sai" class="contact-item" target="_blank" rel="noopener"><div class="c-ico">💼</div><div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/satapathy-sai</div></div></a>
+          <a href="https://dev.to/kumarsai21" class="contact-item" target="_blank" rel="noopener"><div class="c-ico">📝</div><div><div class="c-label">Blog</div><div class="c-val">dev.to/kumarsai21</div></div></a>
+          <a href="https://www.credly.com/users/sai.kumar" class="contact-item" target="_blank" rel="noopener"><div class="c-ico">🏅</div><div><div class="c-label">Credly</div><div class="c-val">credly.com/users/sai.kumar</div></div></a>
+          <div class="contact-item" style="cursor:default;"><div class="c-ico">📍</div><div><div class="c-label">Location</div><div class="c-val">Bengaluru, Karnataka, India</div></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="quick-links">
+          <div class="ql-title">Quick Links</div>
+          <a href="https://linkedin.com/in/satapathy-sai" class="ql-link" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          <a href="https://dev.to/kumarsai21" class="ql-link" target="_blank" rel="noopener">Dev.to Blog ↗</a>
+          <a href="https://www.credly.com/users/sai.kumar" class="ql-link" target="_blank" rel="noopener">Credly Badges ↗</a>
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+            <a href="mailto:saikumar212000@gmail.com" class="btn-fill" style="width:100%;justify-content:center;display:flex;">Send Me a Message ✉</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <span class="footer-name">© 2025 Sai Kumar Satapathy · Bengaluru, India</span>
-  <span class="footer-stack">SAP Datasphere · BW/4HANA · AWS · Azure</span>
+  <span class="footer-l">© 2026 Sai Kumar Satapathy. All rights reserved.</span>
+  <span class="footer-r">SAP BW &amp; Datasphere Developer · Bengaluru</span>
 </footer>
 
 <script>
-  // Mobile menu toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  function closeMobile() { mobileMenu.classList.remove('open'); }
+const menuBtn = document.getElementById('menuBtn');
+const mobNav = document.getElementById('mobNav');
+menuBtn.addEventListener('click', () => mobNav.classList.toggle('open'));
+function closeMob() { mobNav.classList.remove('open'); }
 
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Active nav highlight
-  const sections = document.querySelectorAll('section[id], div[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
-    });
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 55);
+      io.unobserve(e.target);
+    }
   });
+}, { threshold: 0.08 });
+reveals.forEach(el => io.observe(el));
+
+const secs = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+  navAs.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--cyan)' : ''; });
+}, { passive: true });
 </script>
 </body>
 </html>
